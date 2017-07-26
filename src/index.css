@@ -7,3 +7,13 @@ body {
 .App{
   margin: 10px;
 }
+
+.Cards{
+
+}
+
+.Card{
+	border: 1px solid #CCC;
+	height: 200px;
+	padding: 10px;
+}
