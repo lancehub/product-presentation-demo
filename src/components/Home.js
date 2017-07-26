@@ -1,12 +1,21 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import data from '../data/json';
 
 class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      categories: data.categories
+    };
+  }
   render() {
     return (
       <div>
-        <h1>Home</h1>
-        <Link to="/category/1">Category</Link>
+        <p>Home</p>
+        <ul>
+        {this.state.categories.map(category => <li><Link to={"/category/" + category.id}>{category.name}</Link></li>)}
+        </ul>
       </div>
     );
   }
